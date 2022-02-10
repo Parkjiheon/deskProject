@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Auto-scroll</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <style>
+  body{
+	  background-color: rgb(104, 156, 104);
+	  font-family: 'Jua', sans-serif;
+  }
+  h1{
+	  text-align: center;
+  }
+  i{
+	font-size:white;
+	  }
+  #draggable, #draggable2, #draggable3, #draggable4, #draggable5, #draggable6, #draggable7,#draggable8,#draggable9,#draggable10,#draggable11,#draggable12,#draggable13,
+  #draggable14, #draggable15,#draggable16,#draggable17,#draggable18,#draggable19,#draggable20,#draggable21,#draggable22,#draggable23,#draggable24,#draggable25 
+  { position:absolute; color:white; width: 75px; height: 75px; float: center; margin: 0 10px 10px 0;  z-index: 9999;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  
+  
+</head>
+<body>
+	<h1>나에 대해서 얘기해볼까요?</h1>
+	<div style="
+	border-right-style: dashed;
+	border-right-color: white;
+	border-right-width:3px;
+	width:47%;
+	height: 1000px;
+	top:0px;
+	bottom:0px;
+	left:0px;">
+
+		
+		<!--1번째줄-->
+		<div id="draggableHelper1" style="display:inline-block"><img id="draggable" src="./react-brands-removebg-preview_negative.png" style="top:0; left:0;"></div>
+		<div id="draggableHelper2" style="display:inline-block"><img id="draggable2" src="./1585984431769_mexico3.jpg" style="top:0; left:80;"></div>
+		<div id="draggableHelper3" style="display:inline-block"><img id="draggable3" src="https://www.kasandbox.org/programming-images/creatures/Winston.png" style="top:0; left:160;"></div>
+		<div id="draggableHelper4" style="display:inline-block"><img id="draggable4" src="./1585984431769_mexico3.jpg" style="top:0; left:240;"></div>
+		<div id="draggableHelper5" style="display:inline-block"><img id="draggable5" src="./1585984431769_mexico3.jpg" style="top:0; left:320;"></div>
+		<div id="draggableHelper6" style="display:inline-block"><img id="draggable6" src="./1585984431769_mexico3.jpg" style="top:0; left:400;"></div>
+		<div id="draggableHelper7" style="display:inline-block"><img id="draggable7" src="./1585984431769_mexico3.jpg" style="top:0; left:480;"></div>
+		<div id="draggableHelper8" style="display:inline-block"><img id="draggable8" src="./1585984431769_mexico3.jpg" style="top:0; left:560;"></div>
+		<!--2번째줄-->
+		<div id="draggableHelper9" style="display:inline-block"><img id="draggable9" src="./1585984431769_mexico3.jpg" style="top:80; left:-39.5;"></div>
+		<div id="draggableHelper10" style="display:inline-block"><img id="draggable10" src="./1585984431769_mexico3.jpg" style="top:80; left:41;"></div>
+		<div id="draggableHelper11" style="display:inline-block"><img id="draggable11" src="./1585984431769_mexico3.jpg" style="top:80; left:120;"></div>
+		<div id="draggableHelper12" style="display:inline-block"><img id="draggable12" src="./1585984431769_mexico3.jpg" style="top:80; left:200;"></div>
+		<div id="draggableHelper13" style="display:inline-block"><img id="draggable13" src="./1585984431769_mexico3.jpg" style="top:80; left:280;"></div>
+		<div id="draggableHelper14" style="display:inline-block"><img id="draggable14" src="./1585984431769_mexico3.jpg" style="top:80; left:360;"></div>
+		<div id="draggableHelper15" style="display:inline-block"><img id="draggable15" src="./1585984431769_mexico3.jpg" style="top:80; left:440;"></div>
+		<div id="draggableHelper16" style="display:inline-block"><img id="draggable16" src="./1585984431769_mexico3.jpg" style="top:80; left:520;"></div>
+		<!--3번째줄-->
+		<div id="draggableHelper17" style="display:inline-block"><img id="draggable17" src="./1585984431769_mexico3.jpg" style="top:160; left:8;"></div>
+		<div id="draggableHelper18" style="display:inline-block"><img id="draggable18" src="./1585984431769_mexico3.jpg" style="top:160; left:88;"></div>
+		<div id="draggableHelper19" style="display:inline-block"><img id="draggable19" src="./1585984431769_mexico3.jpg" style="top:160; left:168;"></div>
+		<div id="draggableHelper20" style="display:inline-block"><img id="draggable20" src="./1585984431769_mexico3.jpg" style="top:160; left:248;"></div>
+		<div id="draggableHelper21" style="display:inline-block"><img id="draggable21" src="./1585984431769_mexico3.jpg" style="top:160; left:328;"></div>
+		<div id="draggableHelper22" style="display:inline-block"><img id="draggable22" src="./1585984431769_mexico3.jpg" style="top:160; left:408;"></div>
+		<div id="draggableHelper23" style="display:inline-block"><img id="draggable23" src="./1585984431769_mexico3.jpg" style="top:160; left:488;"></div>
+		<div id="draggableHelper24" style="display:inline-block"><img id="draggable24" src="./1585984431769_mexico3.jpg" style="top:160; left:568;"></div>
+		<!--4번째줄-->
+		<div id="draggableHelper25" style="display:inline-block">
+			<i id="draggable25" style="top:240; left:8;" class="fa-solid fa-calculator-simple"></i>
+			</div>
+
+		
+</body>
+<script>
+	$( function() {
+	  $("#draggableHelper1").draggable({ scroll: true});
+	  $( "#draggable" ).resizable();
+	  $("#draggableHelper2").draggable({ scroll: true, scrollSensitivity: 100 });
+	  $( "#draggable2" ).resizable();
+	  $("#draggableHelper3").draggable();
+	  $( "#draggable3" ).resizable();
+	  $("#draggableHelper4").draggable();
+	  $( "#draggable4" ).resizable();
+	  $("#draggableHelper5").draggable();
+	  $( "#draggable5" ).resizable();
+	  $("#draggableHelper6").draggable();
+	  $( "#draggable6" ).resizable();
+	  $("#draggableHelper7").draggable();
+	  $( "#draggable7" ).resizable();
+	  $("#draggableHelper8").draggable();
+	  $( "#draggable8" ).resizable();
+	  $("#draggableHelper9").draggable();
+	  $( "#draggable9" ).resizable();
+	  $("#draggableHelper10").draggable();
+	  $( "#draggable10" ).resizable();
+	  $("#draggableHelper11").draggable();
+	  $( "#draggable11" ).resizable();
+	  $("#draggableHelper12").draggable();
+	  $( "#draggable12" ).resizable();
+	  $("#draggableHelper13").draggable();
+	  $( "#draggable13" ).resizable();
+	  $("#draggableHelper14").draggable();
+	  $( "#draggable14" ).resizable();
+	  $("#draggableHelper15").draggable();
+	  $( "#draggable15" ).resizable();
+	  $("#draggableHelper16").draggable();
+	  $( "#draggable16" ).resizable();
+	  $("#draggableHelper17").draggable();
+	  $( "#draggable17" ).resizable();
+	  $("#draggableHelper18").draggable();
+	  $( "#draggable18" ).resizable();
+	  $("#draggableHelper19").draggable();
+	  $( "#draggable19" ).resizable();
+	  $("#draggableHelper20").draggable();
+	  $( "#draggable20" ).resizable();
+	  $("#draggableHelper21").draggable();
+	  $( "#draggable21" ).resizable();
+	  $("#draggableHelper22").draggable();
+	  $( "#draggable22" ).resizable();
+	  $("#draggableHelper23").draggable();
+	  $( "#draggable23" ).resizable();
+	  $("#draggableHelper24").draggable();
+	  $( "#draggable24" ).resizable();
+	  $("#draggableHelper25").draggable();
+	  $( "#draggable25" ).resizable();
+	  $("#draggableHelper26").draggable();
+	  $( "#draggable26" ).resizable();
+	  $("#draggableHelper27").draggable();
+	  $( "#draggable27" ).resizable();
+
+	  
+	} );
+  
+	</script>
+</html>
